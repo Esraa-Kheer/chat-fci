@@ -1,0 +1,11 @@
+{
+    "name":"fci-chat",
+    "description":"new chat using socket io nodejs",
+    "version": "v1",
+    "dependencies": {
+
+    },
+    "scripts": {
+        
+    }
+}
