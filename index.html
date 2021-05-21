@@ -5,84 +5,108 @@
 
     <style>
       body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif;
+        font-family: tahoma;
+        font: 15px arial, sans-serif;
+        background-color: #d9d9d9;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-image: url("/background.jpg");
       }
       h1 {
         text-align: center;
         margin: auto;
+        font-family: tahoma;
+        color: rgb(88, 1, 88);
       }
       .container {
-        height: 500px;
-        width: 500px;
         margin: auto;
         display: block;
-        margin-top: 2%;
-        border-top-left-radius: 2rem;
-        border-top-right-radius: 2rem;
-        background-color: rgba(152, 157, 236, 0.747);
+        margin: auto;
+        max-width: 550px;
+        font: 15px arial, sans-serif;
+        background-color: white;
+        border-style: solid;
+        border-width: 1px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        padding-right: 25px;
+        padding-left: 25px;
+        box-shadow: 8px 8px 8px rgb(118, 18, 148);
+        border-radius: 20px;
+        border-color: purple;
       }
 
       #form {
-        background: rgba(0, 0, 0, 0.15);
-        padding: 0.25rem;
-        position: absolute;
-        margin: 0;
-        width: 500px;
         display: none;
-
-        height: 3rem;
-        box-sizing: border-box;
-        backdrop-filter: blur(10px);
+        border-style: solid;
+        background-color: #f6f9f6;
+        border-width: 1px;
+        border-color: purple;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        padding-right: 20px;
+        padding-left: 15px;
+        border-radius: 15px;
       }
       #input {
         border: none;
-        padding: 0 1rem;
-        flex-grow: 1;
-        border-radius: 2rem;
-        margin: 0.25rem;
+        padding: 0 16px;
+        border-radius: 40px;
+        margin: 5px;
       }
       #input:focus {
         outline: none;
       }
       #form > button {
-        background: #333;
+        background: rgb(107, 107, 107);
         border: none;
-        padding: 0 1rem;
-        margin: 0.25rem;
-        border-radius: 3px;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
         outline: none;
         color: #fff;
       }
 
       #form0 {
-        background: rgba(0, 0, 0, 0.15);
-        padding: 0.25rem;
+        background: rgb(198, 149, 212);
+        padding: 20px;
         position: fixed;
         margin: 0;
         width: 500px;
         display: flex;
-        bottom: 24%;
-        height: 3rem;
-        box-sizing: border-box;
-        backdrop-filter: blur(10px);
+        bottom: 10%;
+        box-shadow: 8px 8px 8px rgb(118, 18, 148);
+        border-radius: 20px;
+        border-color: purple;
+
+        font: 15px arial, sans-serif;
+        background-color: white;
+        border-style: solid;
+        border-width: 1px;
       }
+
       #name {
         border: none;
-        padding: 0 1rem;
+        padding: 0 16px;
         flex-grow: 1;
-        border-radius: 2rem;
-        margin: 0.25rem;
+        border-radius: 30px;
+        margin: 5px;
       }
+
       #name:focus {
         outline: none;
       }
+
       #form0 > span {
         background: #333;
         border: none;
-        padding: 0 1rem;
-        margin: 0.25rem;
-        border-radius: 3px;
+        padding: 10px;
+        margin: 4px;
+        border-radius: 5px;
         outline: none;
         color: #fff;
       }
@@ -92,11 +116,11 @@
         padding: 0;
       }
       #messages > li {
-        padding: 0.5rem 1rem;
+        padding: 8px 20px;
       }
 
-      #messages > li:nth-child(odd) {
-        background: #efefef;
+      #messages > li:nth-child(even) {
+        background: rgb(243, 243, 243);
       }
     </style>
   </head>
@@ -105,22 +129,39 @@
       <ul id="messages"></ul>
 
       <div id="con">
-        <h1>
-          WELCOME! to OUR Chat
-        </h1>
+        <h1>Welcome To Our Chat!</h1>
         <span></span>
-        <form id="form0">
-          <input id="name" />
+        <form id="form0" action="">
+          <input id="name" placeholder="Enter Your Name Here" />
           <span onclick="takename()">Login</span>
         </form>
       </div>
 
       <form id="form" action="">
-        <input id="input" autocomplete="off" />
-        <span onclick="addemoj(e ='&#128512;')"> &#128512; </span>
+        <input id="input" autocomplete="off" placeholder="Type Here..." />
+        <div>
+          <span onclick="addemoj(e ='&#128512;')"> &#128512; </span>
+          <span onclick="addemoj(e ='&#128514;')"> &#128514; </span>
+          <span onclick="addemoj(e ='&#128075;')"> &#128075; </span>
+          <span onclick="addemoj(e ='&#128525;')"> &#128525; </span>
+          <span onclick="addemoj(e ='&#128526;')"> &#128526; </span>
+          <span onclick="addemoj(e ='&#128580;')"> &#128580; </span>
+          <span onclick="addemoj(e ='&#128519;')"> &#128519; </span>
+          <span onclick="addemoj(e ='&#128557;')"> &#128557; </span>
+          <span onclick="addemoj(e ='&#128077;')"> &#128077; </span>
+          <span onclick="addemoj(e ='&#128079;')"> &#128079; </span>
+          <span onclick="addemoj(e ='&#127770;')"> &#127770; </span>
+          <span onclick="addemoj(e ='&#128544;')"> &#128544; </span>
+          <span onclick="addemoj(e ='&#128561;')"> &#128561; </span>
+          <span onclick="addemoj(e ='&#128577;')"> &#128577; </span>
+          <span onclick="addemoj(e ='&#128579;')"> &#128579; </span>
+          <span onclick="addemoj(e ='&#128578;')"> &#128578; </span>
+        </div>
+
         <button>Send</button>
       </form>
     </div>
+
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
@@ -130,10 +171,21 @@
         document.getElementById("input").value += e;
       }
 
-      var names = ["thanaa", "hala", "heba", "sara"];
-      var colors = ["green", "red", "yellow", "blue"];
+      var names = [
+        "esraa",
+        "dina",
+        "radwa",
+        "aml",
+        "mohamed",
+        "ammar",
+        "abdelrahman",
+      ];
+
+      var colors = ["green", "red", "pink", "blue", "yellow", "grey", "brown"];
+
       var name = "";
       var color = "";
+
       function takename() {
         let nameval = document.getElementById("name").value;
         if (names.includes(nameval)) {
@@ -145,25 +197,24 @@
         }
       }
 
-
       var messages = document.getElementById("messages");
       var form = document.getElementById("form");
       var input = document.getElementById("input");
 
-      form.addEventListener("submit", function(e) {
+      form.addEventListener("submit", function (e) {
         e.preventDefault();
         if (input.value) {
           let msg = {
             name: name,
             color: color,
-            value: input.value
+            value: input.value,
           };
           socket.emit("chat message", msg);
           input.value = "";
         }
       });
 
-      socket.on("chat message", function(msg) {
+      socket.on("chat message", function (msg) {
         var item = document.createElement("li");
         item.innerHTML =
           "<span style='color:" +
