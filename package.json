@@ -1,6 +1,6 @@
 {
     "name":"fci-chat",
-    "description":"new chat using socket io nodejs ,addition linee",
+    "description":"new chat using socket io nodejs ,addition linee , add another line",
     "version": "v1",
     "dependencies": {
 
