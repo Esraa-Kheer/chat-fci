@@ -155,6 +155,12 @@
             border-radius: 20px;
             border-color:rgb(0, 10, 7);
       }
+      #cam{
+        padding:0;
+        margin:0;
+        width: 100px;
+        height:80;
+      }
     </style>
   </head>
   <body>
@@ -193,6 +199,11 @@
           <span onclick="addemoj(e ='&#128577;')"> &#128577; </span>
           <span onclick="addemoj(e ='&#128579;')"> &#128579; </span>
           <span onclick="addemoj(e ='&#128578;')"> &#128578; </span>
+          <div id="cam">
+            <video id="video" ></video>
+          <button id="picture">camera</button>
+          <canvas id="canvas" width="640" height="480"></canvas>
+          </div>
         </div>
 
         <button>Send</button>
@@ -270,6 +281,45 @@
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
       });
+    </script>
+    <script>
+      window.addEventListener("DOMContentLoaded",function(){
+	var canvas=document.getElementById("canvas"),
+		video=document.getElementById("video"),
+		context=canvas.getContext("2d"),
+		videoObj={"video":true},
+		errorfn=function(){
+		console.log('str wrong');
+	}
+	var play=function(){
+		if(navigator.getUserMedia) { // Standard
+			navigator.getUserMedia(videoObj, function(stream) {
+				video.src = stream;
+				video.play();
+			}, errorfn);
+		} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+			navigator.webkitGetUserMedia(videoObj, function(stream){
+				video.src = window.webkitURL.createObjectURL(stream);
+				video.play();
+			}, errorfn);
+		} else if(navigator.mozGetUserMedia) { // WebKit-prefixed
+			navigator.mozGetUserMedia(videoObj, function(stream){
+				video.src = window.URL.createObjectURL(stream);
+				video.play();
+			}, errorfn);
+		}
+		else if(navigator.msGetUserMedia) { // WebKit-prefixed
+			navigator.mozGetUserMedia(videoObj, function(stream){
+				video.src = window.URL.createObjectURL(stream);
+				video.play();
+			}, errorfn);
+		}
+	}
+	play();
+	document.getElementById("picture").addEventListener("click",function(){
+		context.drawImage(video,0,0,640,480);
+	})
+},false)
     </script>
   </body>
 </html>
