@@ -71,17 +71,17 @@
         padding-right: 20px;
         padding-left: 15px;
         border-radius: 15px;
+        
       }
-      #input {
+      input {
         border: none;
-        padding: 0 16px;
+        padding: 50px 250px 50px 50px ;
         border-radius: 40px;
-        margin: 5px;
       }
       #input:focus {
         outline: none;
       }
-      #form > button {
+      #form >fieldset> button {
         background: rgb(107, 107, 107);
         border: none;
         padding: 10px;
@@ -90,6 +90,7 @@
         outline: none;
         color: #fff;
         cursor: pointer;
+        float: 50% left;
       }
 
       #form0 {
@@ -122,7 +123,7 @@
         outline: none;
       }
 
-      #form0 > span {
+      #form0 > span,#cam>button {
         background: #333;
         border: none;
         padding: 10px;
@@ -155,11 +156,27 @@
             border-radius: 20px;
             border-color:rgb(0, 10, 7);
       }
+      
+      #emo >span{
+        cursor: pointer;
+        margin: 40px;
+        width: 50;
+        padding: 10;
+        margin: 1;
+
+      }
+      #video{
+        display: none;
+      }
       #cam{
         padding:0;
         margin:0;
-        width: 100px;
-        height:80;
+        width: 50px;
+        height:20;
+        text-align: center;
+      }
+      canvas{
+      display: none;
       }
     </style>
   </head>
@@ -181,8 +198,9 @@
         </form>
       </div>
       <form id="form" action="">
+        <fieldset>
         <input id="input" autocomplete="off" placeholder="Type Here..." />
-        <div>
+        <span id="emo">
           <span onclick="addemoj(e ='&#128512;')"> &#128512; </span>
           <span onclick="addemoj(e ='&#128514;')"> &#128514; </span>
           <span onclick="addemoj(e ='&#128075;')"> &#128075; </span>
@@ -199,17 +217,20 @@
           <span onclick="addemoj(e ='&#128577;')"> &#128577; </span>
           <span onclick="addemoj(e ='&#128579;')"> &#128579; </span>
           <span onclick="addemoj(e ='&#128578;')"> &#128578; </span>
-          <div id="cam">
-            <video id="video" ></video>
-          <button id="picture">camera</button>
-          <canvas id="canvas" width="640" height="480"></canvas>
-          </div>
-        </div>
-
+        </span>
+        
+        <span id="cam">
+          <video id="video" ></video>
+        <button id="picture">camera</button>
+        <canvas id="canvas" width="150" height="150"></canvas>
+        </spann>
         <button>Send</button>
+      </fieldset>
+      
       </form>
     </div> 
-   
+    
+  
     <a href="https://wa.me/country_code_and_your_phone_number" class="whatsapp_float" target="_blank">
       <i class="fa fa-whatsapp whatsapp-icon"></i>
      </a>
