@@ -2,8 +2,28 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
+    
+      .whatsapp_float {
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        font-size:30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index:100;
+      }
+
+      .whatsapp-icon {
+        margin-top:16px;
+      }
+
       body {
         font-family: tahoma;
         font: 15px arial, sans-serif;
@@ -124,21 +144,36 @@
       #messages > li:nth-child(even) {
         background: rgb(243, 243, 243);
       }
+      .image
+      {     position: fixed;
+            width: 500px;
+            height: 350px;
+            left: 420px;
+            top:120px;
+            border-style: solid;
+            box-shadow: 8px 8px 8px  rgb(6, 97, 70);
+            border-radius: 20px;
+            border-color:rgb(0, 10, 7);
+      }
     </style>
   </head>
   <body>
+   
     <div class="container">
       <ul id="messages"></ul>
 
       <div id="con">
         <h1>Welcome To Our Chat!</h1>
+       
         <span></span>
         <form id="form0" action="">
           <input id="name" placeholder="Enter Your Name Here" />
           <span onclick="takename()">Login</span>
+          <a href="https://wa.me/country_code_and_your_phone_number" class="whatsapp_float" target="_blank">
+            <i class="fa fa-whatsapp whatsapp-icon"></i>
+          <img src="/alexander-shatov-_qsuER9xYOY-unsplash.jpg" class="image">     </a>
         </form>
       </div>
-
       <form id="form" action="">
         <input id="input" autocomplete="off" placeholder="Type Here..." />
         <div>
@@ -162,7 +197,11 @@
 
         <button>Send</button>
       </form>
-    </div>
+    </div> 
+   
+    <a href="https://wa.me/country_code_and_your_phone_number" class="whatsapp_float" target="_blank">
+      <i class="fa fa-whatsapp whatsapp-icon"></i>
+     </a>
 
     <script src="/socket.io/socket.io.js"></script>
 
